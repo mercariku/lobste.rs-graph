@@ -22,6 +22,7 @@ jobs:
       - name: Neo4j import newest
         uses: johnymontana/flat-graph@v1.2
         with:
+          ## notice that in 'with' block, github will read the repo secrets. 
           neo4j-user: ${{secrets.NEO4J_USER}}
           neo4j-password: ${{secrets.NEO4J_PASSWORD}}
           neo4j-uri: ${{secrets.NEO4J_URI}}
